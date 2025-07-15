@@ -66,21 +66,33 @@
             bindings = <&kp DEL>;
             key-positions = <51 12>;
         };
+
+        GameMode {
+            bindings = <&none>;
+            key-positions = <59 7>;
+        };
     };
 
     macros {
         HomePC: HomePC {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 0 &rgb_ug RGB_COLOR_HSB(206,95,57)>;
+            bindings = <&bt BT_SEL 0 &rgb_ug RGB_COLOR_HSB(206,95,57) &to 0>;
             label = "HOMEPC";
         };
 
         WorkPC: WorkPC {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 1 &rgb_ug RGB_COLOR_HSB(278,93,56)>;
+            bindings = <&bt BT_SEL 1 &rgb_ug RGB_COLOR_HSB(278,93,56) &to 0>;
             label = "WORKPC";
+        };
+
+        GameMode: GameMode {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&GameMode &rgb_ug RGB_COLOR_HSB(29,99,38) &to 2>;
+            label = "GAMEMODE";
         };
     };
 
@@ -92,15 +104,15 @@
 
         Primary {
             bindings = <
-&kp ESC     &kp N1     &kp N2        &kp N3    &kp N4     &kp N5    &kp UP_ARROW     &kp N6  &kp N7     &kp N8     &kp N9    &kp N0     &kp BSPC
-&kp GRAVE   &kp Q      &kp W         &kp E     &kp R      &kp T     &kp DOWN_ARROW   &kp Y   &kp U      &kp I      &kp O     &kp P      &kp BSLH
-&kp TAB     &kp A      &kp S         &kp D     &kp F      &kp G     &kp LEFT_ARROW   &kp H   &kp J      &kp K      &kp L     &kp SEMI   &kp SQT
-&kp LSHFT   &kp Z      &kp X         &kp C     &kp V      &kp B     &kp RIGHT_ARROW  &kp N   &kp M      &kp COMMA  &kp DOT   &kp FSLH   &kp RSHIFT
-&kp K_MUTE  &kp LCTRL  &kp LEFT_GUI  &kp LALT  &kp ENTER  &mo 1     &kp ENTER        &mo 2   &kp SPACE  &kp LBKT   &kp RBKT  &kp RCTRL
+&kp ESC    &kp N1     &kp N2        &kp N3    &kp N4     &kp N5    &kp UP_ARROW     &kp N6  &kp N7     &kp N8     &kp N9    &kp N0     &kp BSPC
+&kp GRAVE  &kp Q      &kp W         &kp E     &kp R      &kp T     &kp DOWN_ARROW   &kp Y   &kp U      &kp I      &kp O     &kp P      &kp BSLH
+&kp TAB    &kp A      &kp S         &kp D     &kp F      &kp G     &kp LEFT_ARROW   &kp H   &kp J      &kp K      &kp L     &kp SEMI   &kp SQT
+&kp LSHFT  &kp Z      &kp X         &kp C     &kp V      &kp B     &kp RIGHT_ARROW  &kp N   &kp M      &kp COMMA  &kp DOT   &kp FSLH   &kp RSHIFT
+&none      &kp LCTRL  &kp LEFT_GUI  &kp LALT  &kp ENTER  &mo 1     &kp K_MUTE       &mo 2   &kp SPACE  &kp LBKT   &kp RBKT  &kp RCTRL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
-            display-name = "LAYER0";
+            display-name = "Primary";
         };
 
         Lower {
@@ -112,7 +124,7 @@
 &trans           &trans  &trans   &trans      &trans      &trans         &trans  &trans  &trans  &trans      &trans     &trans
             >;
 
-            display-name = "layer1";
+            display-name = "Lower";
             sensor-bindings = <&scroll_encoder>;
         };
 
@@ -123,6 +135,19 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp PG_DN  &kp LEFT   &kp DOWN    &kp RIGHT   &kp END   &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans     &kp LS(LT)  &kp LS(GT)  &trans    &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans     &trans      &trans      &trans
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
+
+        Game {
+            display-name = "Gaming";
+            bindings = <
+&kp ESC    &kp N1     &kp N2        &kp N3    &kp N4     &kp N5    &kp UP_ARROW     &kp N6  &kp N7     &kp N8     &kp N9    &kp N0     &kp BSPC
+&kp GRAVE  &kp Q      &kp W         &kp E     &kp R      &kp T     &kp DOWN_ARROW   &kp Y   &kp U      &kp I      &kp O     &kp P      &kp BSLH
+&kp TAB    &kp A      &kp S         &kp D     &kp F      &kp G     &kp LEFT_ARROW   &kp H   &kp J      &kp K      &kp L     &kp SEMI   &kp SQT
+&kp LSHFT  &kp Z      &kp X         &kp C     &kp V      &kp B     &kp RIGHT_ARROW  &kp N   &kp M      &kp COMMA  &kp DOT   &kp FSLH   &kp RSHIFT
+&none      &kp LCTRL  &kp LEFT_GUI  &kp LALT  &kp SPACE  &mo 1     &kp K_MUTE       &mo 2   &kp SPACE  &kp LBKT   &kp RBKT  &kp RCTRL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
