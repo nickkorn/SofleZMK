@@ -1,6 +1,6 @@
 layout: {zmk_keyboard: eyelash_sofle}
 layers:
-  LAYER0:
+  Primary:
   - $$mdi:keyboard-esc$$
   - {t: '1', s: '!'}
   - {t: '2', s: '@'}
@@ -53,19 +53,19 @@ layers:
   - {t: ., s: '>'}
   - {t: /, s: '?'}
   - $$mdi:apple-keyboard-shift$$
-  - MUTE
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-command$$
   - $$mdi:apple-keyboard-option$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - layer1
-  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - Lower
+  - MUTE
   - Upper
   - $$mdi:keyboard-space$$
   - {t: '[', s: '{'}
   - {t: ']', s: '}'}
   - $$mdi:apple-keyboard-control$$
-  layer1:
+  Lower:
   - RGB TOG
   - F1
   - F2
@@ -195,6 +195,71 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  Gaming:
+  - $$mdi:keyboard-esc$$
+  - {t: '1', s: '!'}
+  - {t: '2', s: '@'}
+  - {t: '3', s: '#'}
+  - {t: '4', s: $}
+  - {t: '5', s: '%'}
+  - $$mdi:arrow-up-bold$$
+  - {t: '6', s: ^}
+  - {t: '7', s: '&'}
+  - {t: '8', s: '*'}
+  - {t: '9', s: (}
+  - {t: '0', s: )}
+  - {t: '$$mdi:backspace$$', type: backspace}
+  - {t: '`', s: '~'}
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - $$mdi:arrow-down-bold$$
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - {t: \, s: '|'}
+  - $$mdi:keyboard-tab$$
+  - A
+  - S
+  - D
+  - F
+  - G
+  - $$mdi:arrow-left-bold$$
+  - H
+  - J
+  - K
+  - L
+  - {t: ;, s: ':'}
+  - {t: '''', s: '"'}
+  - $$mdi:apple-keyboard-shift$$
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - $$mdi:arrow-right-bold$$
+  - N
+  - M
+  - {t: ',', s: <}
+  - {t: ., s: '>'}
+  - {t: /, s: '?'}
+  - $$mdi:apple-keyboard-shift$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - $$mdi:apple-keyboard-control$$
+  - $$mdi:apple-keyboard-command$$
+  - $$mdi:apple-keyboard-option$$
+  - $$mdi:keyboard-space$$
+  - Lower
+  - MUTE
+  - Upper
+  - $$mdi:keyboard-space$$
+  - {t: '[', s: '{'}
+  - {t: ']', s: '}'}
+  - $$mdi:apple-keyboard-control$$
 combos:
 - p: [53, 55, 12]
   k: Alt+Ctl+$$mdi:backspace-reverse-outline$$
@@ -208,3 +273,5 @@ combos:
   k: $$mdi:bluetooth-off$$
 - p: [51, 12]
   k: $$mdi:backspace-reverse-outline$$
+- p: [59, 7]
+  k: {t: '$$mdi:minus-circle-outline$$', type: none}
