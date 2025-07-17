@@ -34,44 +34,7 @@
         tap-ms = <100>;
     };
 
-    combos {
-        compatible = "zmk,combos";
-
-        CtrlAltDel {
-            bindings = <&kp LA(LC(DEL))>;
-            key-positions = <53 55 12>;
-        };
-
-        CtrlBreak {
-            bindings = <&kp LC(PAUSE_BREAK)>;
-            key-positions = <59 51>;
-        };
-
-        HomePC {
-            bindings = <&HomePC>;
-            key-positions = <59 8>;
-        };
-
-        WorkPC {
-            bindings = <&WorkPC>;
-            key-positions = <59 9>;
-        };
-
-        ClearBluetooth {
-            bindings = <&bt BT_CLR>;
-            key-positions = <59 10>;
-        };
-
-        Delete {
-            bindings = <&kp DEL>;
-            key-positions = <51 12>;
-        };
-
-        GameMode {
-            bindings = <&none>;
-            key-positions = <59 7>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     macros {
         HomePC: HomePC {
@@ -104,10 +67,10 @@
 
         Primary {
             bindings = <
-&kp ESC    &kp N1     &kp N2        &kp N3    &kp N4     &kp N5    &kp UP_ARROW     &kp N6  &kp N7     &kp N8     &kp N9    &kp N0     &kp BSPC
-&kp GRAVE  &kp Q      &kp W         &kp E     &kp R      &kp T     &kp DOWN_ARROW   &kp Y   &kp U      &kp I      &kp O     &kp P      &kp BSLH
-&kp TAB    &kp A      &kp S         &kp D     &kp F      &kp G     &kp LEFT_ARROW   &kp H   &kp J      &kp K      &kp L     &kp SEMI   &kp SQT
-&kp LSHFT  &kp Z      &kp X         &kp C     &kp V      &kp B     &kp RIGHT_ARROW  &kp N   &kp M      &kp COMMA  &kp DOT   &kp FSLH   &kp RSHIFT
+&kp ESC    &kp N1     &kp N2        &kp N3    &kp N4     &kp N5    &kp PG_UP        &kp N6  &kp N7     &kp N8     &kp N9    &kp N0     &kp BSPC
+&kp GRAVE  &kp Q      &kp W         &kp E     &kp R      &kp T     &kp PG_DN        &kp Y   &kp U      &kp I      &kp O     &kp P      &kp BSLH
+&kp TAB    &kp A      &kp S         &kp D     &kp F      &kp G     &kp C_VOL_DN     &kp H   &kp J      &kp K      &kp L     &kp SEMI   &kp SQT
+&kp LSHFT  &kp Z      &kp X         &kp C     &kp V      &kp B     &kp C_VOLUME_UP  &kp N   &kp M      &kp COMMA  &kp DOT   &kp FSLH   &kp RSHIFT
 &none      &kp LCTRL  &kp LEFT_GUI  &kp LALT  &kp ENTER  &mo 1     &kp K_MUTE       &mo 2   &kp SPACE  &kp LBKT   &kp RBKT  &kp RCTRL
             >;
 
@@ -130,28 +93,15 @@
 
         Upper {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &none      &none      &none       &none       &none     &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp PG_UP  &kp EQUAL  &kp UP      &kp MINUS   &kp HOME  &kp SCROLLLOCK
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp PG_DN  &kp LEFT   &kp DOWN    &kp RIGHT   &kp END   &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans     &kp LS(LT)  &kp LS(GT)  &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans     &trans      &trans      &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &none      &bt BT_PRV  &bt BT_NXT  &bt BT_CLR  &none     &kp DEL
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp PG_UP  &kp EQUAL   &kp UP      &kp MINUS   &kp HOME  &kp SCROLLLOCK
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp PG_DN  &kp LEFT    &kp DOWN    &kp RIGHT   &kp END   &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans      &kp LS(LT)  &kp LS(GT)  &trans    &kp RC(PAUSE_BREAK)
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans      &trans      &trans      &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
             label = "Upper";
-        };
-
-        Game {
-            display-name = "Gaming";
-            bindings = <
-&kp ESC    &kp N1     &kp N2        &kp N3    &kp N4     &kp N5    &kp UP_ARROW     &kp N6  &kp N7     &kp N8     &kp N9    &kp N0     &kp BSPC
-&kp GRAVE  &kp Q      &kp W         &kp E     &kp R      &kp T     &kp DOWN_ARROW   &kp Y   &kp U      &kp I      &kp O     &kp P      &kp BSLH
-&kp TAB    &kp A      &kp S         &kp D     &kp F      &kp G     &kp LEFT_ARROW   &kp H   &kp J      &kp K      &kp L     &kp SEMI   &kp SQT
-&kp LSHFT  &kp Z      &kp X         &kp C     &kp V      &kp B     &kp RIGHT_ARROW  &kp N   &kp M      &kp COMMA  &kp DOT   &kp FSLH   &kp RSHIFT
-&none      &kp LCTRL  &kp LEFT_GUI  &kp LALT  &kp SPACE  &mo 1     &kp K_MUTE       &mo 2   &kp SPACE  &kp LBKT   &kp RBKT  &kp RCTRL
-            >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
     };
 };
