@@ -6,6 +6,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
@@ -93,11 +94,11 @@
 
         Upper {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &none      &bt BT_PRV  &bt BT_NXT  &bt BT_CLR  &none     &kp DEL
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp PG_UP  &kp EQUAL   &kp UP      &kp MINUS   &kp HOME  &kp SCROLLLOCK
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp PG_DN  &kp LEFT    &kp DOWN    &kp RIGHT   &kp END   &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans      &kp LS(LT)  &kp LS(GT)  &trans    &kp RC(PAUSE_BREAK)
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans      &trans      &trans      &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &out OUT_TOG  &bt BT_PRV  &bt BT_NXT  &bt BT_CLR  &none     &kp DEL
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp PG_UP     &kp EQUAL   &kp UP      &kp MINUS   &kp HOME  &kp SCROLLLOCK
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp PG_DN     &kp LEFT    &kp DOWN    &kp RIGHT   &kp END   &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans        &trans      &kp LS(LT)  &kp LS(GT)  &trans    &kp RC(PAUSE_BREAK)
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans        &trans      &trans      &trans      &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
