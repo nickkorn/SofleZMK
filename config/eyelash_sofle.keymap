@@ -58,6 +58,13 @@
             bindings = <&GameMode &rgb_ug RGB_COLOR_HSB(29,99,38) &to 2>;
             label = "GAMEMODE";
         };
+
+        KVM_Toggle: KVM_Toggle {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SCROLLLOCK &kp SCROLLLOCK &kp UP>;
+            label = "KVM_TOGGLE";
+        };
     };
 
     behaviors {
@@ -81,11 +88,11 @@
 
         Lower {
             bindings = <
-&rgb_ug RGB_TOG  &kp F1  &kp F2   &kp F3      &kp F4      &trans         &trans  &trans  &trans  &trans      &trans     &trans       &soft_off
-&rgb_ug RGB_EFF  &kp F5  &kp F6   &kp F7      &kp F8      &kp PG_UP      &trans  &trans  &trans  &trans      &trans     &trans       &trans
-&rgb_ug RGB_EFF  &kp F9  &kp F10  &kp F11     &kp F12     &kp PG_DN      &trans  &trans  &trans  &trans      &trans     &trans       &trans
-&trans           &trans  &trans   &kp LS(F3)  &kp LC(F3)  &bootloader    &trans  &trans  &trans  &sys_reset  &soft_off  &bootloader  &trans
-&trans           &trans  &trans   &trans      &trans      &trans         &trans  &trans  &trans  &trans      &trans     &trans
+&rgb_ug RGB_TOG  &kp F1           &kp F2   &kp F3      &kp F4      &KVM_Toggle    &trans  &trans  &trans  &trans      &trans     &trans       &soft_off
+&rgb_ug RGB_EFF  &kp F5           &kp F6   &kp F7      &kp F8      &kp PG_UP      &trans  &trans  &trans  &trans      &trans     &trans       &trans
+&rgb_ug RGB_EFF  &kp F9           &kp F10  &kp F11     &kp F12     &kp PG_DN      &trans  &trans  &trans  &trans      &trans     &trans       &trans
+&trans           &kp PRINTSCREEN  &trans   &kp LS(F3)  &kp LC(F3)  &bootloader    &trans  &trans  &trans  &sys_reset  &soft_off  &bootloader  &trans
+&trans           &trans           &trans   &trans      &trans      &trans         &trans  &trans  &trans  &trans      &trans     &trans
             >;
 
             display-name = "Lower";
