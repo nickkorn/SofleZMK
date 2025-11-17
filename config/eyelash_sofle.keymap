@@ -88,11 +88,11 @@
 
         Lower {
             bindings = <
-&rgb_ug RGB_TOG  &kp F1           &kp F2   &kp F3      &kp F4      &KVM_Toggle    &trans  &trans  &trans  &trans      &trans     &trans       &soft_off
-&kp SCROLLLOCK   &kp F5           &kp F6   &kp F7      &kp F8      &kp PG_UP      &trans  &trans  &trans  &trans      &trans     &trans       &trans
-&kp UP           &kp F9           &kp F10  &kp F11     &kp F12     &kp PG_DN      &trans  &trans  &trans  &trans      &trans     &trans       &trans
-&trans           &kp PRINTSCREEN  &trans   &kp LS(F3)  &kp LC(F3)  &bootloader    &trans  &trans  &trans  &sys_reset  &soft_off  &bootloader  &studio_unlock
-&trans           &trans           &trans   &trans      &trans      &trans         &trans  &trans  &trans  &trans      &trans     &trans
+&out OUT_USB    &kp F1           &kp F2   &kp F3      &kp F4      &sys_reset     &trans           &sys_reset   &trans  &trans  &trans  &trans  &trans
+&kp SCROLLLOCK  &kp F5           &kp F6   &kp F7      &kp F8      &kp PG_UP      &trans           &trans       &trans  &trans  &trans  &trans  &trans
+&kp UP          &kp F9           &kp F10  &kp F11     &kp F12     &kp PG_DN      &trans           &trans       &trans  &trans  &trans  &trans  &trans
+&trans          &kp PRINTSCREEN  &trans   &kp LS(F3)  &kp LC(F3)  &bootloader    &trans           &bootloader  &trans  &trans  &trans  &trans  &trans
+&trans          &trans           &trans   &trans      &trans      &trans         &rgb_ug RGB_TOG  &trans       &trans  &trans  &trans  &trans
             >;
 
             display-name = "Lower";
@@ -102,7 +102,7 @@
         Upper {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &out OUT_TOG  &bt BT_PRV  &bt BT_NXT  &bt BT_CLR  &none     &kp DEL
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp PG_UP     &kp EQUAL   &kp UP      &kp MINUS   &kp HOME  &kp SCROLLLOCK
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp PG_UP     &kp EQUAL   &kp UP      &kp MINUS   &kp HOME  &kp SLCK
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp PG_DN     &kp LEFT    &kp DOWN    &kp RIGHT   &kp END   &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans        &trans      &kp LS(LT)  &kp LS(GT)  &trans    &kp RC(PAUSE_BREAK)
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans        &trans      &trans      &trans      &trans
