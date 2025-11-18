@@ -88,11 +88,11 @@
 
         Lower {
             bindings = <
-&out OUT_USB  &kp F1           &kp F2   &kp F3      &kp F4      &sys_reset     &trans           &sys_reset   &trans  &trans  &trans  &trans  &trans
-&out OUT_BLE  &kp F5           &kp F6   &kp F7      &kp F8      &kp PG_UP      &trans           &trans       &trans  &trans  &trans  &trans  &trans
-&trans        &kp F9           &kp F10  &kp F11     &kp F12     &kp PG_DN      &trans           &trans       &trans  &trans  &trans  &trans  &trans
-&trans        &kp PRINTSCREEN  &trans   &kp LS(F3)  &kp LC(F3)  &bootloader    &trans           &bootloader  &trans  &trans  &trans  &trans  &trans
-&trans        &trans           &trans   &trans      &trans      &trans         &rgb_ug RGB_TOG  &trans       &trans  &trans  &trans  &trans
+&out OUT_USB    &kp F1           &kp F2   &kp F3      &kp F4      &sys_reset     &rgb_ug RGB_COLOR_HSB(28,100,50)   &sys_reset   &trans  &trans  &trans  &trans  &trans
+&out OUT_BLE    &kp F5           &kp F6   &kp F7      &kp F8      &kp PG_UP      &rgb_ug RGB_COLOR_HSB(176,100,50)  &trans       &trans  &trans  &trans  &trans  &trans
+&studio_unlock  &kp F9           &kp F10  &kp F11     &kp F12     &kp PG_DN      &rgb_ug RGB_COLOR_HSB(300,100,50)  &trans       &trans  &trans  &trans  &trans  &trans
+&trans          &kp PRINTSCREEN  &trans   &kp LS(F3)  &kp LC(F3)  &bootloader    &rgb_ug RGB_COLOR_HSB(264,100,50)  &bootloader  &trans  &trans  &trans  &trans  &trans
+&trans          &trans           &trans   &trans      &trans      &trans         &rgb_ug RGB_TOG                    &trans       &trans  &trans  &trans  &trans
             >;
 
             display-name = "Lower";
