@@ -72,7 +72,7 @@ layers:
   - F3
   - F4
   - {t: '$$mdi:backup-restore$$', type: bootloader}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - RGB COLOR HSB(28,100,50)
   - {t: '$$mdi:backup-restore$$', type: bootloader}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -85,20 +85,20 @@ layers:
   - F7
   - F8
   - PG UP
+  - RGB COLOR HSB(176,100,50)
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '&studio_unlock'
   - F9
   - F10
   - F11
   - F12
   - PG DN
-  - {t: '$$mdi:transfer$$', type: trans}
+  - RGB COLOR HSB(300,100,50)
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -111,7 +111,7 @@ layers:
   - Sft+F3
   - Ctl+F3
   - $$mdi:progress-download$$
-  - {t: '$$mdi:transfer$$', type: trans}
+  - RGB COLOR HSB(264,100,50)
   - $$mdi:progress-download$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
